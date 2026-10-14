@@ -1,0 +1,17 @@
+*.exe
+*.pdb
+*.lib
+*.obj
+*.o
+*.zip
+*.tmp
+*.note
+*.note.bak
+*.note.corrupt-*
+/settings.ini
+/session.ini
+/Recycled/
+/build/
+/dist/
+/.vs/
+CMakeUserPresets.json

@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "panel": "shared",
+        "reveal": "always"
+      },
+      "command": "powershell.exe",
+      "label": "Build LightNotes",
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\build.ps1"
+      ]
+    },
+    {
+      "label": "Run LightNotes",
+      "type": "process",
+      "command": "${workspaceFolder}\\LightNotes.exe",
+      "dependsOn": "Build LightNotes",
+      "problemMatcher": []
+    }
+  ]
+}
