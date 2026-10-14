@@ -1,4 +1,4 @@
-param([string]$DataRoot,[string]$Screenshot)
+﻿param([string]$DataRoot,[string]$Screenshot)
 $ErrorActionPreference='Stop'
 if(!$DataRoot){$DataRoot=Join-Path $env:TEMP ('LightNotesMaterial-'+[guid]::NewGuid())}
 $requestedScreenshot=$Screenshot

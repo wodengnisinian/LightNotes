@@ -12,7 +12,7 @@ try {
  $raw=[IO.File]::ReadAllBytes($file)
  if ([Text.Encoding]::Unicode.GetString($raw,56,$raw.Length-56) -ne $content) { throw 'FAIL saved UTF-16 text' }; 'PASS saved text matches'
  Command $note 102; Command $note 103; Command $note 106
- if((Get-Content (Join-Path $DataRoot 'settings.ini')) -notcontains 'fixed=1'){throw 'FAIL pad fixed state persistence'}; 'PASS whole-pad fixed state persisted' 
+ if((Get-Content (Join-Path $DataRoot 'settings.ini')) -notcontains 'fixed=1'){throw 'FAIL pad fixed state persistence'}; 'PASS whole-pad fixed state persisted'
  $raw=[IO.File]::ReadAllBytes($file)
  if ([BitConverter]::ToInt32($raw,4) -ne 1 -or [BitConverter]::ToInt32($raw,8) -ne 0 -or [BitConverter]::ToInt32($raw,36) -ne 1) { throw 'FAIL color readonly and non-topmost persistence' }; 'PASS color / readonly / non-topmost persisted'
  Command $note 106

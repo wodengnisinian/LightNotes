@@ -67,5 +67,3 @@ try{
  Exit-App
  'ALL PAGE AND BUTTON CHECKS PASSED'
 }finally{if($script:app -and !$script:app.HasExited){Command $script:hostWindow 903};if($dpi){[NotesTest]::SetThreadDpiAwarenessContext($dpi)|Out-Null}}
-
-

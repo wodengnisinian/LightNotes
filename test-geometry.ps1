@@ -57,6 +57,3 @@ try{
  'PASS resizing empty pad preserves header-only shape';Exit-App
  'ALL GEOMETRY AND FLAT PAPER CHECKS PASSED'
 }finally{if($script:app -and !$script:app.HasExited){Command $script:hostWindow 903}}
-
-
-

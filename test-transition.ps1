@@ -41,5 +41,3 @@ foreach($material in 0,1,2){
  }finally{if($firstImage){$firstImage.Dispose()};if($nextImage){$nextImage.Dispose()};if($script:app -and !$script:app.HasExited){Command $script:hostWindow 903}}
 }
 'ALL VISUAL TRANSITION CHECKS PASSED'
-
-

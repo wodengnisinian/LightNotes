@@ -49,4 +49,3 @@ try{
  Assert ([NotesTest]::SendMessage([NotesTest]::GetDlgItem($style,216),0x147,[IntPtr]::Zero,[IntPtr]::Zero).ToInt32() -eq 2 -and [NotesTest]::SendMessage([NotesTest]::GetDlgItem($style,214),0x400,[IntPtr]::Zero,[IntPtr]::Zero).ToInt32() -eq 22) 'appearance restored after restart'
  Exit-App;'ALL PANEL CHECKS PASSED'
 }finally{if($script:app -and !$script:app.HasExited){Command $script:hostWindow 903}}
-

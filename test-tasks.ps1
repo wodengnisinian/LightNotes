@@ -53,4 +53,3 @@ try{
  Expect '重启后保留' 'completed event stays gone after restart';Exit-App
  'ALL RULED TODO AND FIXED VIEWPORT CHECKS PASSED'
 }finally{if($app -and !$app.HasExited){Command $hostWindow 903}}
-
